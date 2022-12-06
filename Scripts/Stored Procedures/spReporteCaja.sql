@@ -2,18 +2,18 @@ USE MAD_PF;
 
 GO
 
-IF OBJECT_ID('spReporteVentas') IS NOT NULL
+IF OBJECT_ID('spReporteCaja') IS NOT NULL
 BEGIN
-	DROP PROCEDURE spReporteVentas;
+	DROP PROCEDURE spReporteCaja;
 END;
 GO
 
-CREATE PROCEDURE spReporteVentas
+CREATE PROCEDURE spReporteCaja
 	(
 	@Accion			CHAR(3),
 	@fechai			date			=null,
 	@fechaf			date			=null,	
-	@Caja			int				=NULL,	
+	@Cajero			varchar(30)		=NULL,	
 	@Departamento	VARCHAR(20)		=NULL	
 	)
 AS
@@ -24,13 +24,13 @@ BEGIN
 
 	BEGIN
 		
-		SELECT Nombre,Fecha,ID,Precio_U,Caja,Cantidad,Subtotal, Descuento, Venta, Utilidad 
-		FROM viReporteVentas
+		SELECT Cajero,Fecha,Nombre,Cantidad,Venta, Utilidad 
+		FROM viReporteCaja
 		WHERE (Fecha is null OR( Fecha  between @fechai and @fechaf))
 		AND (@Departamento IS NULL OR (Nombre = @Departamento or Nombre is null))
-		AND (@Caja IS NULL OR (Caja = @Caja or Caja is null))
+		AND (@Cajero IS NULL OR (Cajero = @Cajero or Cajero is null))
 		union	
-		SELECT  'Total',null,null,null,null,SUM(a.Cantidad),SUM((a.Cantidad * i.Precio_U)) Subtotal,SUM((I.Precio_U - dbo.fnGetDes(I.Precio_U,De.Porcentaje,De.Activo))*a.Cantidad) Descuento,SUM( (dbo.fnGetDes(I.Precio_U,De.Porcentaje,De.Activo))*a.Cantidad) Venta,SUM((i.Precio_U - i.Costo) * a.Cantidad) Utilidad 
+		SELECT  'Total',null,null,SUM(a.Cantidad),SUM( (dbo.fnGetDes(I.Precio_U,De.Porcentaje,De.Activo))*a.Cantidad) Venta,SUM((i.Precio_U - i.Costo) * a.Cantidad) Utilidad 
 		FROM Ventas V
 		inner JOIN Articulos A
 			ON v.Orden = a.Orden
@@ -42,7 +42,7 @@ BEGIN
 			ON i.Clave = d.Clave
 		WHERE (Fecha is null OR( Fecha  between @fechai and @fechaf))
 		AND (@Departamento IS NULL OR (Nombre = @Departamento or Nombre is null))
-		AND (@Caja IS NULL OR (Caja = @Caja or Caja is null))
+		AND (@Cajero IS NULL OR (Cajero = @Cajero or Cajero is null))
 		order by Fecha desc
 		
 	END 

@@ -102,5 +102,13 @@ BEGIN
 		FROM viGestionUsuarios
 	
 	END;
+
+	IF @Accion = 'SE6'
+	BEGIN
+		SELECT  ID,Usuario,Nivel_cuenta
+		FROM Usuarios
+		where Nivel_cuenta = 0
+	
+	END;
 END;
 GO

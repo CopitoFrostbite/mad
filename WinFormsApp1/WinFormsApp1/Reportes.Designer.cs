@@ -35,6 +35,10 @@
             this.dg_rep = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cb_caje = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.dt_ffin = new System.Windows.Forms.DateTimePicker();
             this.dt_fini = new System.Windows.Forms.DateTimePicker();
             this.cb_caj = new System.Windows.Forms.ComboBox();
@@ -65,7 +69,7 @@
             // rb_inv
             // 
             this.rb_inv.AutoSize = true;
-            this.rb_inv.Location = new System.Drawing.Point(137, 22);
+            this.rb_inv.Location = new System.Drawing.Point(180, 22);
             this.rb_inv.Name = "rb_inv";
             this.rb_inv.Size = new System.Drawing.Size(138, 19);
             this.rb_inv.TabIndex = 1;
@@ -77,13 +81,14 @@
             // rb_caj
             // 
             this.rb_caj.AutoSize = true;
-            this.rb_caj.Location = new System.Drawing.Point(285, 22);
+            this.rb_caj.Location = new System.Drawing.Point(368, 22);
             this.rb_caj.Name = "rb_caj";
             this.rb_caj.Size = new System.Drawing.Size(108, 19);
             this.rb_caj.TabIndex = 2;
             this.rb_caj.TabStop = true;
             this.rb_caj.Text = "Reporte de Caja";
             this.rb_caj.UseVisualStyleBackColor = true;
+            this.rb_caj.CheckedChanged += new System.EventHandler(this.rb_caj_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -92,7 +97,7 @@
             this.groupBox1.Controls.Add(this.rb_inv);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(450, 54);
+            this.groupBox1.Size = new System.Drawing.Size(499, 54);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reportes";
@@ -111,7 +116,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(798, 193);
+            this.button4.Location = new System.Drawing.Point(659, 181);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 19;
@@ -121,6 +126,10 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.cb_caje);
+            this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.dt_ffin);
             this.groupBox3.Controls.Add(this.dt_fini);
             this.groupBox3.Controls.Add(this.cb_caj);
@@ -132,16 +141,52 @@
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Location = new System.Drawing.Point(12, 91);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(746, 125);
+            this.groupBox3.Size = new System.Drawing.Size(499, 125);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Filtros";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(249, 68);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 15);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Fecha Final:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 15);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Fecha Inicial:";
+            // 
+            // cb_caje
+            // 
+            this.cb_caje.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_caje.FormattingEnabled = true;
+            this.cb_caje.Location = new System.Drawing.Point(291, 22);
+            this.cb_caje.Name = "cb_caje";
+            this.cb_caje.Size = new System.Drawing.Size(104, 23);
+            this.cb_caje.TabIndex = 36;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(241, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 15);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Cajero:";
             // 
             // dt_ffin
             // 
             this.dt_ffin.CustomFormat = "yyyy-MM-dd";
             this.dt_ffin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_ffin.Location = new System.Drawing.Point(583, 24);
+            this.dt_ffin.Location = new System.Drawing.Point(324, 64);
             this.dt_ffin.Name = "dt_ffin";
             this.dt_ffin.Size = new System.Drawing.Size(119, 23);
             this.dt_ffin.TabIndex = 34;
@@ -150,7 +195,7 @@
             // 
             this.dt_fini.CustomFormat = "yyyy-MM-dd";
             this.dt_fini.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_fini.Location = new System.Drawing.Point(427, 24);
+            this.dt_fini.Location = new System.Drawing.Point(117, 63);
             this.dt_fini.Name = "dt_fini";
             this.dt_fini.Size = new System.Drawing.Size(119, 23);
             this.dt_fini.TabIndex = 33;
@@ -177,7 +222,7 @@
             // cb_em
             // 
             this.cb_em.AutoSize = true;
-            this.cb_em.Location = new System.Drawing.Point(427, 24);
+            this.cb_em.Location = new System.Drawing.Point(12, 68);
             this.cb_em.Name = "cb_em";
             this.cb_em.Size = new System.Drawing.Size(122, 19);
             this.cb_em.TabIndex = 25;
@@ -196,7 +241,7 @@
             // cb_mer
             // 
             this.cb_mer.AutoSize = true;
-            this.cb_mer.Location = new System.Drawing.Point(629, 24);
+            this.cb_mer.Location = new System.Drawing.Point(387, 24);
             this.cb_mer.Name = "cb_mer";
             this.cb_mer.Size = new System.Drawing.Size(89, 19);
             this.cb_mer.TabIndex = 6;
@@ -224,7 +269,7 @@
             // 
             // bt_bus
             // 
-            this.bt_bus.Location = new System.Drawing.Point(798, 116);
+            this.bt_bus.Location = new System.Drawing.Point(659, 108);
             this.bt_bus.Name = "bt_bus";
             this.bt_bus.Size = new System.Drawing.Size(75, 23);
             this.bt_bus.TabIndex = 21;
@@ -274,5 +319,9 @@
         private Label label1;
         private DateTimePicker dt_ffin;
         private DateTimePicker dt_fini;
+        private Label label2;
+        private ComboBox cb_caje;
+        private Label label4;
+        private Label label3;
     }
 }
