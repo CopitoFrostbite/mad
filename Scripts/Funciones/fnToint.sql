@@ -1,0 +1,21 @@
+USE MAD_PF;
+
+GO
+
+IF OBJECT_ID('fnToint') IS NOT NULL
+BEGIN
+	DROP FUNCTION fnToint;
+END;
+GO
+
+CREATE FUNCTION fnToint
+(
+	@string VARCHAR(255)
+)
+
+RETURNS INT
+
+AS
+BEGIN
+	RETURN CAST(@string AS INT)
+END

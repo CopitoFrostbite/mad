@@ -1,0 +1,2 @@
+BACKUP DATABASE MAD_PF
+TO DISK = 'E:\web'
