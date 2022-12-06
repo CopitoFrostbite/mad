@@ -842,6 +842,68 @@ namespace WinFormsApp1
             return tabla;
         }
 
+        public DataTable Rep_Ventas(string opc, string dat1, string dat2, int caj, string dep)
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "spReporteVentas";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                var parametro1 = _comandosql.Parameters.Add("@Accion", SqlDbType.Char, 3);
+                parametro1.Value = opc;
+                var parametro2 = _comandosql.Parameters.Add("@fechai", SqlDbType.Date);
+                parametro2.Value = dat1;
+                var parametro3 = _comandosql.Parameters.Add("@fechaf", SqlDbType.Date);
+                parametro3.Value = dat2;
+                if (dep != "Todos")
+                {
+                    var parametro4 = _comandosql.Parameters.Add("@Departamento", SqlDbType.VarChar, 20);
+                    parametro4.Value = dep;
+                }
+                else
+                {
+                    var parametro4 = _comandosql.Parameters.AddWithValue("@Departamento", DBNull.Value);
+
+                }
+
+                if (caj != 0)
+                {
+                    var parametro7 = _comandosql.Parameters.Add("@Caja", SqlDbType.Int);
+                    parametro7.Value = caj;
+                }
+                else
+                {
+                    var parametro4 = _comandosql.Parameters.AddWithValue("@Caja", DBNull.Value);
+                }
+               
+
+
+                _adaptador.SelectCommand = _comandosql;
+
+
+                _adaptador.Fill(tabla);
+
+            }
+            catch (SqlException e)
+            {
+
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
+        }
+
         public bool Add_Usuario( string opc, string usu, string nom, string pat, string mat, string con, string cur, string nac, string nomi, string cor,string ing, bool niv, bool est,int id)
         {
             var msg = "";

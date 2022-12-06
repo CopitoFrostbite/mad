@@ -52,7 +52,7 @@ CREATE TABLE Articulos
 Orden INT NOT NULL, --PK (FK ventas),
 Articulo INT NOT NULL, --(PK FK inventario),
 Cantidad DECIMAL(13,2) NOT NULL,
-Subtotal SMALLMONEY NOT NULL,
+Precio SMALLMONEY NOT NULL,
 Total SMALLMONEY NOT NULL,
 );
 

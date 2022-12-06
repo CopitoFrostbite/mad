@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3Xbh0GUpWErjy+PzvEsaYrwQqzoOwjgzJbfcZxjPWzOwW2Y924FNJrTQqlGsfa35Y1xfvKoquQHVm9LJ/iSLgg==",
+  "dgSpecHash": "blbSh8HwFLStUyxarF9diSvDMcrcjxQ0I1Ng7DaylrSHCoPRw6VYHN8qSS2Jt47vup4kIg0E95LXpxzrUe+8Iw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rober\\source\\repos\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+  "projectFilePath": "C:\\Users\\rober\\OneDrive\\Escritorio\\MAD\\proyecto\\mad\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rober\\.nuget\\packages\\aspose.pdf\\22.11.0\\aspose.pdf.22.11.0.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\microsoft.extensions.dependencymodel\\6.0.0\\microsoft.extensions.dependencymodel.6.0.0.nupkg.sha512",

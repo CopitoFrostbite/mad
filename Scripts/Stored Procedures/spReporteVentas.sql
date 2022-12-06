@@ -24,14 +24,14 @@ BEGIN
 
 	BEGIN
 		
-		SELECT  ID,Producto,Departamento,Unidad,Precio,Costo,Existencia,Unidades_Vendidas as 'Ventas',Merma
-		FROM viReporteInventario
-		WHERE (@fechai IS NULL OR  Existencia < Pun_Reorden)
-		AND (@Departamento IS NULL OR Departamento = @Departamento)
-		AND (@Existencia IS NULL OR Existencia = 0)
-		AND (@Merma IS NULL OR Merma > 0)
+		SELECT Fecha,Nombre,ID,Precio_U,Caja,Cantidad,Subtotal, Descuento, Venta, Utilidad 
+		FROM viReporteVentas
+		WHERE (Fecha is null OR( Fecha  between @fechai and @fechaf))
+		AND (@Departamento IS NULL OR Nombre = @Departamento or Nombre is null)
+		AND (@Caja IS NULL OR Caja = @Caja or Caja is null)
+		order by Fecha desc
 		
-	END; 
+	END 
 
 	
 END;

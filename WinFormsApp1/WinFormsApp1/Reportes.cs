@@ -26,7 +26,15 @@ namespace WinFormsApp1
                 cb_metr.Items.Add(row["Departamento"].ToString());
             }
             cb_metr.Items.Add("Todos");
-            cb_metr.SelectedItem= "Todos";
+            cb_metr.SelectedItem = "Todos";
+            tabla = obj.Consulta("spGestionCaja", "SE3", 0, "");
+            foreach (DataRow row in tabla.Rows)
+            {
+                cb_caj.Items.Add(row["Numero"].ToString());
+            }
+            cb_caj.Items.Insert(0,"Todos");
+            cb_caj.SelectedItem = "Todos";
+
         }
 
         private void bt_bus_Click(object sender, EventArgs e)
@@ -41,11 +49,53 @@ namespace WinFormsApp1
                 dg_rep.Columns["Precio"].DefaultCellStyle.Format = "c2";
                 dg_rep.Columns["Costo"].DefaultCellStyle.Format = "c2";
             }
+            if (rb_ven.Checked)
+            {
+                var obj = new EnlaceDB();
+                var tabla2 = new DataTable();
+                tabla2 = obj.Rep_Ventas("SE", dt_fini.Text, dt_ffin.Text, cb_caj.SelectedIndex, cb_metr.Text);
+
+                dg_rep.DataSource = tabla2;
+               // dg_rep.Columns["Precio"].DefaultCellStyle.Format = "c2";
+               // dg_rep.Columns["Costo"].DefaultCellStyle.Format = "c2";
+            }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void rb_inv_CheckedChanged(object sender, EventArgs e)
+        {
+            cb_metr.Show();
+            label11.Show();
+            cb_ago.Show();
+            cb_em.Show();
+            cb_mer.Show();
+            label1.Hide();
+            cb_caj.Hide();
+            dt_fini.Hide();
+            dt_ffin.Hide();
+        }
+
+        private void rb_ven_CheckedChanged(object sender, EventArgs e)
+        {
+            cb_metr.Show();
+            label11.Show();
+            cb_ago.Hide();
+            cb_em.Hide();
+            cb_mer.Hide();
+            label1.Show();
+            cb_caj.Show();
+            dt_fini.Show();
+            dt_ffin.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

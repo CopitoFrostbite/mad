@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rb_caja = new System.Windows.Forms.RadioButton();
+            this.rb_ven = new System.Windows.Forms.RadioButton();
             this.rb_inv = new System.Windows.Forms.RadioButton();
-            this.rb_vent = new System.Windows.Forms.RadioButton();
+            this.rb_caj = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dg_rep = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dt_ffin = new System.Windows.Forms.DateTimePicker();
+            this.dt_fini = new System.Windows.Forms.DateTimePicker();
+            this.cb_caj = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cb_em = new System.Windows.Forms.CheckBox();
             this.cb_metr = new System.Windows.Forms.ComboBox();
             this.cb_mer = new System.Windows.Forms.CheckBox();
@@ -46,43 +50,45 @@
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // rb_caja
+            // rb_ven
             // 
-            this.rb_caja.AutoSize = true;
-            this.rb_caja.Location = new System.Drawing.Point(15, 22);
-            this.rb_caja.Name = "rb_caja";
-            this.rb_caja.Size = new System.Drawing.Size(107, 19);
-            this.rb_caja.TabIndex = 0;
-            this.rb_caja.TabStop = true;
-            this.rb_caja.Text = "Hisorial de Caja";
-            this.rb_caja.UseVisualStyleBackColor = true;
+            this.rb_ven.AutoSize = true;
+            this.rb_ven.Location = new System.Drawing.Point(15, 22);
+            this.rb_ven.Name = "rb_ven";
+            this.rb_ven.Size = new System.Drawing.Size(119, 19);
+            this.rb_ven.TabIndex = 0;
+            this.rb_ven.TabStop = true;
+            this.rb_ven.Text = "Reporte de Ventas";
+            this.rb_ven.UseVisualStyleBackColor = true;
+            this.rb_ven.CheckedChanged += new System.EventHandler(this.rb_ven_CheckedChanged);
             // 
             // rb_inv
             // 
             this.rb_inv.AutoSize = true;
             this.rb_inv.Location = new System.Drawing.Point(137, 22);
             this.rb_inv.Name = "rb_inv";
-            this.rb_inv.Size = new System.Drawing.Size(141, 19);
+            this.rb_inv.Size = new System.Drawing.Size(138, 19);
             this.rb_inv.TabIndex = 1;
             this.rb_inv.TabStop = true;
-            this.rb_inv.Text = "Historial de Inventario";
+            this.rb_inv.Text = "Reporte de Inventario";
             this.rb_inv.UseVisualStyleBackColor = true;
+            this.rb_inv.CheckedChanged += new System.EventHandler(this.rb_inv_CheckedChanged);
             // 
-            // rb_vent
+            // rb_caj
             // 
-            this.rb_vent.AutoSize = true;
-            this.rb_vent.Location = new System.Drawing.Point(285, 22);
-            this.rb_vent.Name = "rb_vent";
-            this.rb_vent.Size = new System.Drawing.Size(111, 19);
-            this.rb_vent.TabIndex = 2;
-            this.rb_vent.TabStop = true;
-            this.rb_vent.Text = "Historial de Caja";
-            this.rb_vent.UseVisualStyleBackColor = true;
+            this.rb_caj.AutoSize = true;
+            this.rb_caj.Location = new System.Drawing.Point(285, 22);
+            this.rb_caj.Name = "rb_caj";
+            this.rb_caj.Size = new System.Drawing.Size(108, 19);
+            this.rb_caj.TabIndex = 2;
+            this.rb_caj.TabStop = true;
+            this.rb_caj.Text = "Reporte de Caja";
+            this.rb_caj.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rb_caja);
-            this.groupBox1.Controls.Add(this.rb_vent);
+            this.groupBox1.Controls.Add(this.rb_ven);
+            this.groupBox1.Controls.Add(this.rb_caj);
             this.groupBox1.Controls.Add(this.rb_inv);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -115,6 +121,10 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.dt_ffin);
+            this.groupBox3.Controls.Add(this.dt_fini);
+            this.groupBox3.Controls.Add(this.cb_caj);
+            this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.cb_em);
             this.groupBox3.Controls.Add(this.cb_metr);
             this.groupBox3.Controls.Add(this.cb_mer);
@@ -126,6 +136,43 @@
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Filtros";
+            // 
+            // dt_ffin
+            // 
+            this.dt_ffin.CustomFormat = "yyyy-MM-dd";
+            this.dt_ffin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_ffin.Location = new System.Drawing.Point(583, 24);
+            this.dt_ffin.Name = "dt_ffin";
+            this.dt_ffin.Size = new System.Drawing.Size(119, 23);
+            this.dt_ffin.TabIndex = 34;
+            // 
+            // dt_fini
+            // 
+            this.dt_fini.CustomFormat = "yyyy-MM-dd";
+            this.dt_fini.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_fini.Location = new System.Drawing.Point(427, 24);
+            this.dt_fini.Name = "dt_fini";
+            this.dt_fini.Size = new System.Drawing.Size(119, 23);
+            this.dt_fini.TabIndex = 33;
+            // 
+            // cb_caj
+            // 
+            this.cb_caj.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_caj.FormattingEnabled = true;
+            this.cb_caj.Location = new System.Drawing.Point(291, 22);
+            this.cb_caj.Name = "cb_caj";
+            this.cb_caj.Size = new System.Drawing.Size(104, 23);
+            this.cb_caj.TabIndex = 27;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(252, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 15);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Caja:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cb_em
             // 
@@ -210,9 +257,9 @@
 
         #endregion
 
-        private RadioButton rb_caja;
+        private RadioButton rb_ven;
         private RadioButton rb_inv;
-        private RadioButton rb_vent;
+        private RadioButton rb_caj;
         private GroupBox groupBox1;
         private DataGridView dg_rep;
         private Button button4;
@@ -223,5 +270,9 @@
         private ComboBox cb_metr;
         private CheckBox cb_em;
         private Button bt_bus;
+        private ComboBox cb_caj;
+        private Label label1;
+        private DateTimePicker dt_ffin;
+        private DateTimePicker dt_fini;
     }
 }

@@ -71,15 +71,26 @@ SELECT  ID,Producto,Departamento,Unidad,Precio,Costo,Existencia,Unidades_Vendida
 		AND (@Merma IS NULL OR Merma > 0)
 		group by ID
 
-SELECT  v.Orden,v.Caja,Fecha,d.Nombre,i.ID,i.Descripcion,i.Precio_U,a.Cantidad,(a.Cantidad * i.Precio_U) Subtotal,(I.Precio_U - dbo.fnGetDes(I.Precio_U,De.Porcentaje,De.Activo))*a.Cantidad Descuento, (dbo.fnGetDes(I.Precio_U,De.Porcentaje,De.Activo))*a.Cantidad Venta,(i.Precio_U - i.Costo) * a.Cantidad Utilidad 
+SELECT  Fecha,d.Nombre,i.ID,i.Precio_U,v.Caja,sum(a.Cantidad)as 'Cantidad',sum((a.Cantidad * i.Precio_U)) Subtotal,sum((I.Precio_U - dbo.fnGetDes(I.Precio_U,De.Porcentaje,De.Activo))*a.Cantidad) Descuento,sum( (dbo.fnGetDes(I.Precio_U,De.Porcentaje,De.Activo))*a.Cantidad) Venta,sum((i.Precio_U - i.Costo) * a.Cantidad) Utilidad 
 		FROM Ventas V
-		LEFT JOIN Articulos A
+		inner JOIN Articulos A
 			ON v.Orden = a.Orden
-		LEFT JOIN Inventario I
+		inner JOIN Inventario I
 			ON a.Articulo = i.ID
-		LEFT JOIN Descuentos De
+		inner JOIN Descuentos De
 			ON I.Descuento = De.ID_Des
-		LEFT JOIN Departamento D
+		inner JOIN Departamento D
 			ON i.Clave = d.Clave
-		group by v.Orden,Fecha,d.Nombre,v.Caja,i.ID,i.Precio_U
-		order by v.Orden
+		group by Fecha,d.Nombre,v.Caja,i.ID,i.Precio_U
+		union	
+		SELECT  null,null,null,null,null,SUM(a.Cantidad),SUM((a.Cantidad * i.Precio_U)) Subtotal,SUM((I.Precio_U - dbo.fnGetDes(I.Precio_U,De.Porcentaje,De.Activo))*a.Cantidad) Descuento,SUM( (dbo.fnGetDes(I.Precio_U,De.Porcentaje,De.Activo))*a.Cantidad) Venta,SUM((i.Precio_U - i.Costo) * a.Cantidad) Utilidad 
+		FROM Ventas V
+		inner JOIN Articulos A
+			ON v.Orden = a.Orden
+		inner JOIN Inventario I
+			ON a.Articulo = i.ID
+		inner JOIN Descuentos De
+			ON I.Descuento = De.ID_Des
+		inner JOIN Departamento D
+			ON i.Clave = d.Clave
+			order by Fecha desc
