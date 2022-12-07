@@ -18,15 +18,19 @@ AS
 BEGIN
 	
 	
-
+	
+	SELECT  Nombre,[Contrasenia], Usuario,Nivel_cuenta
+	
+	FROM Usuarios
+	WHERE Usuario = @Usuario AND [Contrasenia] = @Contrasenia;
+	
+	SELECT  Usuario
+	INTO ##GlobalVariables
+	FROM Usuarios
+	WHERE Usuario = @Usuario AND [Contrasenia] = @Contrasenia;
 	
 	
-	BEGIN
-		SELECT  Nombre,[Contrasenia],Usuario,Nivel_cuenta
-		FROM Usuarios
-		WHERE Usuario = @Usuario AND [Contrasenia] = @Contrasenia;
-	END;
-
+	
 	
 END;
 GO

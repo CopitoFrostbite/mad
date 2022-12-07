@@ -1046,19 +1046,19 @@ namespace WinFormsApp1
 
                 var parametro1 = _comandosql.Parameters.Add("@Accion", SqlDbType.Char, 3);
                 parametro1.Value = opc;
-                var parametro2 = _comandosql.Parameters.Add("@Nombre", SqlDbType.VarChar, 30);
+                var parametro2 = _comandosql.Parameters.Add("@Nombre", SqlDbType.VarChar, 200);
                 parametro2.Value = nom;
-                var parametro3 = _comandosql.Parameters.Add("@Sucursal", SqlDbType.VarChar, 30);
+                var parametro3 = _comandosql.Parameters.Add("@Sucursal", SqlDbType.VarChar, 200);
                 parametro3.Value = suc;
-                var parametro4 = _comandosql.Parameters.Add("@Direccion", SqlDbType.VarChar, 30);
+                var parametro4 = _comandosql.Parameters.Add("@Direccion", SqlDbType.VarChar, 200);
                 parametro4.Value = dir;
-                var parametro5 = _comandosql.Parameters.Add("@Mensaje1", SqlDbType.VarChar, 30);
+                var parametro5 = _comandosql.Parameters.Add("@Mensaje1", SqlDbType.VarChar, 200);
                 parametro5.Value = ms1;
-                var parametro6 = _comandosql.Parameters.Add("@Mensaje2", SqlDbType.VarChar, 30);
+                var parametro6 = _comandosql.Parameters.Add("@Mensaje2", SqlDbType.VarChar, 200);
                 parametro6.Value = ms2;
-                var parametro7 = _comandosql.Parameters.Add("@Mensaje3", SqlDbType.VarChar, 16);
+                var parametro7 = _comandosql.Parameters.Add("@Mensaje3", SqlDbType.VarChar, 200);
                 parametro7.Value = mi1;
-                var parametro8 = _comandosql.Parameters.Add("@Mensaje4", SqlDbType.VarChar, 16);
+                var parametro8 = _comandosql.Parameters.Add("@Mensaje4", SqlDbType.VarChar, 200);
                 parametro8.Value = mi2;
 
                 _adaptador.InsertCommand = _comandosql;

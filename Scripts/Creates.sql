@@ -2,6 +2,7 @@
 USE MAD_PF;
 
 
+
 IF OBJECT_ID('Historial_Cambios') IS NOT NULL
 	DROP TABLE Historial_Cambios;
 CREATE TABLE Historial_Cambios

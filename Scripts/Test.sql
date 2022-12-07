@@ -116,3 +116,13 @@ SELECT  Fecha,d.Nombre,i.ID,i.Precio_U,v.Caja,sum(a.Cantidad)as 'Cantidad',sum((
 		AND (null IS NULL OR (Nombre = NULL or Nombre is null))
 		AND (3 IS NULL OR (Caja = 3 or Caja is null))
 		order by Fecha desc
+
+	SELECT  Nombre,[Contrasenia], Usuario,Nivel_cuenta	
+	FROM Usuarios	
+	WHERE Usuario = 'Admin' AND [Contrasenia] = 1234;
+	
+	SELECT  Nombre,[Contrasenia], Usuario,Nivel_cuenta
+	INTO ##GlobalVariables
+	FROM Usuarios
+	WHERE Usuario = 'Admin' AND [Contrasenia] = 1234;
+		select * from ##GlobalVariables
