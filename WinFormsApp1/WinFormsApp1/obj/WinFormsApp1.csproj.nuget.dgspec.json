@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\Facultad\\Materias 9no semestre\\MAD(tercersas)\\mad\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "C:\\Users\\rober\\OneDrive\\Escritorio\\MAD\\proyecto\\mad\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\Facultad\\Materias 9no semestre\\MAD(tercersas)\\mad\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "C:\\Users\\rober\\OneDrive\\Escritorio\\MAD\\proyecto\\mad\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Facultad\\Materias 9no semestre\\MAD(tercersas)\\mad\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "C:\\Users\\rober\\OneDrive\\Escritorio\\MAD\\proyecto\\mad\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "D:\\Documentos\\Facultad\\Materias 9no semestre\\MAD(tercersas)\\mad\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
-        "packagesPath": "C:\\Users\\Luis A. De León\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Facultad\\Materias 9no semestre\\MAD(tercersas)\\mad\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "projectPath": "C:\\Users\\rober\\OneDrive\\Escritorio\\MAD\\proyecto\\mad\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rober\\OneDrive\\Escritorio\\MAD\\proyecto\\mad\\WinFormsApp1\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Luis A. De León\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

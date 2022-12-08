@@ -356,10 +356,5 @@ namespace WinFormsApp1
 
             }
         }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -102,33 +102,26 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button4.Location = new System.Drawing.Point(521, 613);
+            this.button4.Location = new System.Drawing.Point(539, 451);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 30);
+            this.button4.Size = new System.Drawing.Size(102, 23);
             this.button4.TabIndex = 16;
             this.button4.Text = "Regresar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // bt_ag
             // 
-            this.bt_ag.BackColor = System.Drawing.SystemColors.ControlText;
-            this.bt_ag.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bt_ag.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bt_ag.Location = new System.Drawing.Point(521, 351);
+            this.bt_ag.Location = new System.Drawing.Point(539, 182);
             this.bt_ag.Name = "bt_ag";
-            this.bt_ag.Size = new System.Drawing.Size(130, 30);
+            this.bt_ag.Size = new System.Drawing.Size(102, 23);
             this.bt_ag.TabIndex = 15;
             this.bt_ag.Text = "Ejecutar";
-            this.bt_ag.UseVisualStyleBackColor = false;
+            this.bt_ag.UseVisualStyleBackColor = true;
             this.bt_ag.Click += new System.EventHandler(this.bt_ag_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupBox1.Controls.Add(this.ntb_desc);
             this.groupBox1.Controls.Add(this.dt_ff);
             this.groupBox1.Controls.Add(this.dt_fi);
@@ -138,11 +131,9 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox1.Location = new System.Drawing.Point(12, 90);
+            this.groupBox1.Location = new System.Drawing.Point(12, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(610, 223);
+            this.groupBox1.Size = new System.Drawing.Size(639, 94);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Descuentos";
@@ -150,50 +141,49 @@
             // 
             // ntb_desc
             // 
-            this.ntb_desc.Location = new System.Drawing.Point(33, 117);
-            this.ntb_desc.Margin = new System.Windows.Forms.Padding(2);
+            this.ntb_desc.Location = new System.Drawing.Point(143, 48);
             this.ntb_desc.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
             this.ntb_desc.Name = "ntb_desc";
-            this.ntb_desc.Size = new System.Drawing.Size(80, 29);
+            this.ntb_desc.Size = new System.Drawing.Size(103, 23);
             this.ntb_desc.TabIndex = 34;
             // 
             // dt_ff
             // 
             this.dt_ff.CustomFormat = "yyyy-MM-dd";
             this.dt_ff.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_ff.Location = new System.Drawing.Point(319, 122);
+            this.dt_ff.Location = new System.Drawing.Point(429, 45);
             this.dt_ff.Name = "dt_ff";
-            this.dt_ff.Size = new System.Drawing.Size(200, 29);
+            this.dt_ff.Size = new System.Drawing.Size(200, 23);
             this.dt_ff.TabIndex = 33;
             // 
             // dt_fi
             // 
             this.dt_fi.CustomFormat = "yyyy-MM-dd";
             this.dt_fi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_fi.Location = new System.Drawing.Point(319, 52);
+            this.dt_fi.Location = new System.Drawing.Point(429, 18);
             this.dt_fi.Name = "dt_fi";
-            this.dt_fi.Size = new System.Drawing.Size(200, 29);
+            this.dt_fi.Size = new System.Drawing.Size(200, 23);
             this.dt_fi.TabIndex = 32;
             this.dt_fi.ValueChanged += new System.EventHandler(this.dt_fa_ValueChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 120);
+            this.label10.Location = new System.Drawing.Point(120, 51);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 21);
+            this.label10.Size = new System.Drawing.Size(17, 15);
             this.label10.TabIndex = 11;
             this.label10.Text = "%";
             // 
             // tb_des
             // 
-            this.tb_des.Location = new System.Drawing.Point(13, 52);
+            this.tb_des.Location = new System.Drawing.Point(127, 19);
             this.tb_des.Name = "tb_des";
-            this.tb_des.Size = new System.Drawing.Size(257, 29);
+            this.tb_des.Size = new System.Drawing.Size(119, 23);
             this.tb_des.TabIndex = 4;
             // 
             // label9
@@ -201,34 +191,34 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(10, 25);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 21);
+            this.label9.Size = new System.Drawing.Size(72, 15);
             this.label9.TabIndex = 3;
             this.label9.Text = "Descripcion:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(319, 94);
+            this.label6.Location = new System.Drawing.Point(297, 49);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 21);
+            this.label6.Size = new System.Drawing.Size(69, 15);
             this.label6.TabIndex = 1;
             this.label6.Text = "Fecha Final:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 94);
+            this.label5.Location = new System.Drawing.Point(10, 50);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 21);
+            this.label5.Size = new System.Drawing.Size(66, 15);
             this.label5.TabIndex = 1;
             this.label5.Text = "Descuento:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(319, 25);
+            this.label1.Location = new System.Drawing.Point(297, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 21);
+            this.label1.Size = new System.Drawing.Size(89, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Fecha de Inicio:";
             // 
@@ -237,7 +227,7 @@
             this.dg_usu.AllowUserToAddRows = false;
             this.dg_usu.AllowUserToDeleteRows = false;
             this.dg_usu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_usu.Location = new System.Drawing.Point(12, 337);
+            this.dg_usu.Location = new System.Drawing.Point(12, 182);
             this.dg_usu.MultiSelect = false;
             this.dg_usu.Name = "dg_usu";
             this.dg_usu.ReadOnly = true;
@@ -251,12 +241,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupBox2.Controls.Add(this.rb_ell);
             this.groupBox2.Controls.Add(this.rb_edd);
             this.groupBox2.Controls.Add(this.rb_agg);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.groupBox2.Location = new System.Drawing.Point(12, 11);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(246, 49);
@@ -270,7 +257,7 @@
             this.rb_ell.AutoSize = true;
             this.rb_ell.Location = new System.Drawing.Point(168, 22);
             this.rb_ell.Name = "rb_ell";
-            this.rb_ell.Size = new System.Drawing.Size(85, 25);
+            this.rb_ell.Size = new System.Drawing.Size(68, 19);
             this.rb_ell.TabIndex = 11;
             this.rb_ell.Text = "Eliminar";
             this.rb_ell.UseVisualStyleBackColor = true;
@@ -281,7 +268,7 @@
             this.rb_edd.AutoSize = true;
             this.rb_edd.Location = new System.Drawing.Point(107, 22);
             this.rb_edd.Name = "rb_edd";
-            this.rb_edd.Size = new System.Drawing.Size(68, 25);
+            this.rb_edd.Size = new System.Drawing.Size(55, 19);
             this.rb_edd.TabIndex = 9;
             this.rb_edd.Text = "Editar";
             this.rb_edd.UseVisualStyleBackColor = true;
@@ -293,7 +280,7 @@
             this.rb_agg.Checked = true;
             this.rb_agg.Location = new System.Drawing.Point(10, 22);
             this.rb_agg.Name = "rb_agg";
-            this.rb_agg.Size = new System.Drawing.Size(84, 25);
+            this.rb_agg.Size = new System.Drawing.Size(67, 19);
             this.rb_agg.TabIndex = 8;
             this.rb_agg.TabStop = true;
             this.rb_agg.Text = "Agregar";
@@ -304,8 +291,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.ClientSize = new System.Drawing.Size(666, 655);
+            this.ClientSize = new System.Drawing.Size(666, 493);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gb_ac);

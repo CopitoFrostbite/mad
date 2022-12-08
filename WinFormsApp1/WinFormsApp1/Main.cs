@@ -205,10 +205,5 @@ namespace WinFormsApp1
             Reportes reportes = new Reportes();
             reportes.ShowDialog();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
