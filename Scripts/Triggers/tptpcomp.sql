@@ -14,19 +14,19 @@ ON Articulos
 INSTEAD OF INSERT
 AS
 BEGIN
-    -- Verificar si el artículo ya existe en la tabla
+   
 	
     IF EXISTS (SELECT 1 FROM Articulos a,inserted i WHERE a.Articulo = i.Articulo and a.Orden  = i.Orden)
     BEGIN
        IF (SELECT a.Cantidad FROM Articulos a,inserted i WHERE a.Articulo = i.Articulo and a.Orden  = i.Orden) + (select i.Cantidad from inserted i) > (SELECT Existencia FROM Inventario,inserted i WHERE ID = i.Articulo)
 	   BEGIN
-			-- Mostrar un mensaje de error y cancelar la operación de inserción
+			
 			RAISERROR ('No hay suficiente cantidad de artículos en inventario', 16, 1);
 			ROLLBACK TRANSACTION;
 		END
 		ELSE
 		BEGIN
-		 -- Actualizar el número de artículos de ese artículo en la tabla
+		 
 			UPDATE Articulos
 			SET Cantidad = Cantidad +(select i.Cantidad from inserted i)
 			WHERE Articulo = (select i.Articulo from inserted i) and Orden  = (select i.Orden from inserted i);
