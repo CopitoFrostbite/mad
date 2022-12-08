@@ -46,9 +46,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupBox2.Controls.Add(this.rb_elll);
             this.groupBox2.Controls.Add(this.rb_eddd);
             this.groupBox2.Controls.Add(this.rb_aggg);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(246, 49);
@@ -61,7 +64,7 @@
             this.rb_elll.AutoSize = true;
             this.rb_elll.Location = new System.Drawing.Point(168, 22);
             this.rb_elll.Name = "rb_elll";
-            this.rb_elll.Size = new System.Drawing.Size(68, 19);
+            this.rb_elll.Size = new System.Drawing.Size(85, 25);
             this.rb_elll.TabIndex = 11;
             this.rb_elll.Text = "Eliminar";
             this.rb_elll.UseVisualStyleBackColor = true;
@@ -72,7 +75,7 @@
             this.rb_eddd.AutoSize = true;
             this.rb_eddd.Location = new System.Drawing.Point(107, 22);
             this.rb_eddd.Name = "rb_eddd";
-            this.rb_eddd.Size = new System.Drawing.Size(55, 19);
+            this.rb_eddd.Size = new System.Drawing.Size(68, 25);
             this.rb_eddd.TabIndex = 9;
             this.rb_eddd.Text = "Editar";
             this.rb_eddd.UseVisualStyleBackColor = true;
@@ -84,7 +87,7 @@
             this.rb_aggg.Checked = true;
             this.rb_aggg.Location = new System.Drawing.Point(10, 22);
             this.rb_aggg.Name = "rb_aggg";
-            this.rb_aggg.Size = new System.Drawing.Size(67, 19);
+            this.rb_aggg.Size = new System.Drawing.Size(84, 25);
             this.rb_aggg.TabIndex = 8;
             this.rb_aggg.TabStop = true;
             this.rb_aggg.Text = "Agregar";
@@ -93,59 +96,68 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(539, 452);
+            this.button4.BackColor = System.Drawing.SystemColors.ControlText;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button4.Location = new System.Drawing.Point(537, 445);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 23);
+            this.button4.Size = new System.Drawing.Size(130, 30);
             this.button4.TabIndex = 39;
             this.button4.Text = "Regresar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // bt_ag
             // 
-            this.bt_ag.Location = new System.Drawing.Point(539, 183);
+            this.bt_ag.BackColor = System.Drawing.SystemColors.ControlText;
+            this.bt_ag.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bt_ag.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_ag.Location = new System.Drawing.Point(537, 176);
             this.bt_ag.Name = "bt_ag";
-            this.bt_ag.Size = new System.Drawing.Size(102, 23);
+            this.bt_ag.Size = new System.Drawing.Size(130, 30);
             this.bt_ag.TabIndex = 38;
             this.bt_ag.Text = "Ejecutar";
-            this.bt_ag.UseVisualStyleBackColor = true;
+            this.bt_ag.UseVisualStyleBackColor = false;
             this.bt_ag.Click += new System.EventHandler(this.bt_ag_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupBox1.Controls.Add(this.cb_dev);
             this.groupBox1.Controls.Add(this.tb_nom);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Location = new System.Drawing.Point(12, 67);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox1.Location = new System.Drawing.Point(0, 73);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(488, 61);
+            this.groupBox1.Size = new System.Drawing.Size(598, 61);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Descuentos";
+            this.groupBox1.Text = "Datos Departamentos";
             // 
             // cb_dev
             // 
             this.cb_dev.AutoSize = true;
             this.cb_dev.Location = new System.Drawing.Point(392, 25);
             this.cb_dev.Name = "cb_dev";
-            this.cb_dev.Size = new System.Drawing.Size(86, 19);
+            this.cb_dev.Size = new System.Drawing.Size(107, 25);
             this.cb_dev.TabIndex = 35;
             this.cb_dev.Text = "Devolucion";
             this.cb_dev.UseVisualStyleBackColor = true;
             // 
             // tb_nom
             // 
-            this.tb_nom.Location = new System.Drawing.Point(127, 19);
+            this.tb_nom.Location = new System.Drawing.Point(114, 25);
             this.tb_nom.Name = "tb_nom";
-            this.tb_nom.Size = new System.Drawing.Size(119, 23);
+            this.tb_nom.Size = new System.Drawing.Size(119, 29);
             this.tb_nom.TabIndex = 4;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 25);
+            this.label9.Location = new System.Drawing.Point(37, 29);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 15);
+            this.label9.Size = new System.Drawing.Size(71, 21);
             this.label9.TabIndex = 3;
             this.label9.Text = "Nombre:";
             // 
@@ -170,6 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.ClientSize = new System.Drawing.Size(679, 505);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);

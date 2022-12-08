@@ -82,3 +82,46 @@ C:\Users\rober\OneDrive\Escritorio\MAD\proyecto\mad\WinFormsApp1\WinFormsApp1\ob
 C:\Users\rober\OneDrive\Escritorio\MAD\proyecto\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
 C:\Users\rober\OneDrive\Escritorio\MAD\proyecto\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
 C:\Users\rober\OneDrive\Escritorio\MAD\proyecto\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.exe
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.dll.config
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.deps.json
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.runtimeconfig.json
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.pdb
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\Aspose.PDF.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Cajas.resources
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Departamentos.resources
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Descuentos.resources
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Devoluciones.resources
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Inventario.resources
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Login.resources
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Main.resources
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Recibo.resources
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Reportes.resources
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Tienda.resources
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Usuario.resources
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Ventas.resources
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.GenerateResource.cache
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfo.cs
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.CopyComplete
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\refint\WinFormsApp1.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
+D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Properties.Resources.resources

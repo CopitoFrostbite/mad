@@ -141,7 +141,7 @@
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Location = new System.Drawing.Point(12, 91);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(499, 125);
+            this.groupBox3.Size = new System.Drawing.Size(592, 125);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Filtros";
@@ -241,7 +241,7 @@
             // cb_mer
             // 
             this.cb_mer.AutoSize = true;
-            this.cb_mer.Location = new System.Drawing.Point(387, 24);
+            this.cb_mer.Location = new System.Drawing.Point(431, 26);
             this.cb_mer.Name = "cb_mer";
             this.cb_mer.Size = new System.Drawing.Size(89, 19);
             this.cb_mer.TabIndex = 6;
