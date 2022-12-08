@@ -114,14 +114,11 @@
             this.dg_inv.AllowUserToAddRows = false;
             this.dg_inv.AllowUserToDeleteRows = false;
             this.dg_inv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
-<<<<<<< HEAD
+ 
             this.dg_inv.Location = new System.Drawing.Point(12, 389);
-=======
-=======
->>>>>>> parent of ee9fad9 (final creo)
+
             this.dg_inv.Location = new System.Drawing.Point(18, 290);
->>>>>>> parent of ee9fad9 (final creo)
+
             this.dg_inv.MultiSelect = false;
             this.dg_inv.Name = "dg_inv";
             this.dg_inv.ReadOnly = true;
@@ -530,14 +527,11 @@
             this.dg_des.AllowUserToAddRows = false;
             this.dg_des.AllowUserToDeleteRows = false;
             this.dg_des.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             this.dg_des.Location = new System.Drawing.Point(269, 389);
-=======
-=======
->>>>>>> parent of ee9fad9 (final creo)
+
             this.dg_des.Location = new System.Drawing.Point(275, 290);
->>>>>>> parent of ee9fad9 (final creo)
+
             this.dg_des.MultiSelect = false;
             this.dg_des.Name = "dg_des";
             this.dg_des.ReadOnly = true;
@@ -552,14 +546,10 @@
             this.dg_dep.AllowUserToAddRows = false;
             this.dg_dep.AllowUserToDeleteRows = false;
             this.dg_dep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             this.dg_dep.Location = new System.Drawing.Point(526, 389);
-=======
-=======
->>>>>>> parent of ee9fad9 (final creo)
             this.dg_dep.Location = new System.Drawing.Point(532, 290);
->>>>>>> parent of ee9fad9 (final creo)
+
             this.dg_dep.MultiSelect = false;
             this.dg_dep.Name = "dg_dep";
             this.dg_dep.ReadOnly = true;
