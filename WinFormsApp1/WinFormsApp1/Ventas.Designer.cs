@@ -177,7 +177,7 @@
             this.dg_bus.Size = new System.Drawing.Size(443, 195);
             this.dg_bus.TabIndex = 16;
             this.dg_bus.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_bus_CellContentClick);
-            this.dg_bus.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_bus_CellContentClick_1);
+           
             this.dg_bus.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_bus_CellContentClick);
             this.dg_bus.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_bus_CellContentClick);
             this.dg_bus.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_bus_CellContentClick);
