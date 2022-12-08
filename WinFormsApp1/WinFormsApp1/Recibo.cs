@@ -195,7 +195,7 @@ namespace WinFormsApp1
                
                
                 dg_rec.Columns["Subtotal"].DefaultCellStyle.Format = "c2";
-                dg_rec.Columns["Total"].DefaultCellStyle.Format = "c2";               
+                dg_rec.Columns["TotalProd"].DefaultCellStyle.Format = "c2";               
                
                 dg_rec.Columns["Cantidad"].DefaultCellStyle.Format = "n2";
                 tablerec = tablab;
@@ -203,7 +203,7 @@ namespace WinFormsApp1
 
                 {
 
-                    i += Convert.ToDecimal(table2["Total"]);
+                    i += Convert.ToDecimal(table2["TotalProd"]);
 
                 }
 

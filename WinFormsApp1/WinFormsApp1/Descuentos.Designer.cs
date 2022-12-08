@@ -226,7 +226,10 @@
             // 
             this.dg_usu.AllowUserToAddRows = false;
             this.dg_usu.AllowUserToDeleteRows = false;
+            this.dg_usu.AllowUserToResizeColumns = false;
+            this.dg_usu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_usu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_usu.ColumnHeadersVisible = false;
             this.dg_usu.Location = new System.Drawing.Point(12, 182);
             this.dg_usu.MultiSelect = false;
             this.dg_usu.Name = "dg_usu";
@@ -236,7 +239,6 @@
             this.dg_usu.Size = new System.Drawing.Size(488, 292);
             this.dg_usu.TabIndex = 13;
             this.dg_usu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_usu_CellContentClick);
-            this.dg_usu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_usu_CellContentClick_1);
             this.dg_usu.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_usu_CellContentClick);
             // 
             // groupBox2

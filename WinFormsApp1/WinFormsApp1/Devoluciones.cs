@@ -123,13 +123,14 @@ namespace WinFormsApp1
 
                 DataTable a = new DataTable();
                 DataTable b = new DataTable();
-                b = obj.Consulta("spGestionDevoluciones", "SE", ido, "");
+               
+                b = obj.Consulta("spGestionDevoluciones", "SE3", ido, "");
                 foreach (DataRow tablep in b.Rows)
 
                 {
                    if (!Convert.ToBoolean(tablep["Merma"])) obj.Add_Inventario2("UP3", Convert.ToInt32(tablep["Articulo"]), Convert.ToDecimal(tablep["Cantidad"]),use);
                    else obj.Add_Inventario2("UP4", Convert.ToInt32(tablep["Articulo"]), Convert.ToDecimal(tablep["Cantidad"]),use);
-
+                    obj.Add_Devolucion2("UP", Convert.ToInt32(tablep["Recibo"]), Convert.ToInt32(tablep["Articulo"]));
                 }
                 a = obj.Consulta("spGestionDevoluciones", "SE", ido, "");
                 pdfman.devo(a,Convert.ToDecimal( ntb_totd.Value));      
@@ -182,7 +183,7 @@ namespace WinFormsApp1
                 obj.Add_Devolucion("IN", ido, idd, tb_motd.Text, cb_actd.Checked, ntb_cand.Value, sub, ntb_cand.Value * sub);
 
 
-                tablab = obj.Consulta("spGestionDevoluciones", "SE", ido, "");
+                tablab = obj.Consulta("spGestionDevoluciones", "SE3", ido, "");
                 dg_devo.DataSource = tablab;
                 tabled2 = tablab;
 
@@ -228,8 +229,11 @@ namespace WinFormsApp1
 
         private void dg_devo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            idd2 = Convert.ToInt32(tabled2.Rows[e.RowIndex]["Articulo"]);
-            ido2 = Convert.ToInt32(tabled2.Rows[e.RowIndex]["Recibo"]);
+            if (e.RowIndex > -1)
+            {
+                idd2 = Convert.ToInt32(tabled2.Rows[e.RowIndex]["Articulo"]);
+                ido2 = Convert.ToInt32(tabled2.Rows[e.RowIndex]["Recibo"]);
+            }
         }
 
 
@@ -308,11 +312,6 @@ namespace WinFormsApp1
 
             }
             else return;
-        }
-
-        private void dg_busdd_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

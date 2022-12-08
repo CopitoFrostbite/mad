@@ -10,7 +10,7 @@ GO
 
 CREATE View viGestionRecibo 
 AS
-SELECT  T.Nombre,T.Sucursal,t.Direccion,t.Mensaje1,t.Mensaje2,t.Mensaje3,t.Mensaje4,A.Orden,Articulo,I.Descripcion Producto, Precio_U Precio,Cantidad,I.Precio_U - dbo.fnGetDes(I.Precio_U,D.Porcentaje,D.Activo) Descuento,dbo.fnGetDes(I.Precio_U,D.Porcentaje,D.Activo) Subtotal, (dbo.fnGetDes(I.Precio_U,D.Porcentaje,D.Activo))*A.Cantidad TotalProd,v.Descuento DescuentoTotal ,v.Total,v.Pago  ,R.Cambio, de.Devolucion Devolucion,v.Caja,v.Fecha  
+SELECT  T.Nombre,T.Sucursal,t.Direccion,t.Mensaje1,t.Mensaje2,t.Mensaje3,t.Mensaje4,A.Orden,Articulo,I.Descripcion Producto, a.Precio Precio,Cantidad,a.Precio - dbo.fnGetDes(a.Precio,D.Porcentaje,D.Activo) Descuento,dbo.fnGetDes(a.Precio,D.Porcentaje,D.Activo) Subtotal, (dbo.fnGetDes(a.Precio,D.Porcentaje,D.Activo))*A.Cantidad TotalProd,v.Descuento DescuentoTotal ,v.Total,v.Pago  ,R.Cambio, de.Devolucion Devolucion,v.Caja,v.Fecha  
 		
 		FROM Recibo R
 		LEFT JOIN Articulos A

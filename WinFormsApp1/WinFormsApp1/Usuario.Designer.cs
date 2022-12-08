@@ -69,7 +69,10 @@
             // 
             this.dg_usu.AllowUserToAddRows = false;
             this.dg_usu.AllowUserToDeleteRows = false;
+            this.dg_usu.AllowUserToResizeColumns = false;
+            this.dg_usu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_usu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_usu.ColumnHeadersVisible = false;
             this.dg_usu.Location = new System.Drawing.Point(12, 277);
             this.dg_usu.MultiSelect = false;
             this.dg_usu.Name = "dg_usu";

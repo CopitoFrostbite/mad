@@ -189,10 +189,5 @@ namespace WinFormsApp1
             tb_nom.Enabled = false;
             cb_dev.Enabled = false;
         }
-
-        private void dg_dep_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

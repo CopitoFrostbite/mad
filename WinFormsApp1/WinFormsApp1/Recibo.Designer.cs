@@ -117,8 +117,10 @@
             // 
             this.dg_rec.AllowUserToAddRows = false;
             this.dg_rec.AllowUserToDeleteRows = false;
+            this.dg_rec.AllowUserToResizeColumns = false;
             this.dg_rec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_rec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_rec.ColumnHeadersVisible = false;
             this.dg_rec.Location = new System.Drawing.Point(22, 192);
             this.dg_rec.MultiSelect = false;
             this.dg_rec.Name = "dg_rec";

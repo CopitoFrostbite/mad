@@ -104,7 +104,9 @@
             // 
             this.dg_inv.AllowUserToAddRows = false;
             this.dg_inv.AllowUserToDeleteRows = false;
+            this.dg_inv.AllowUserToResizeColumns = false;
             this.dg_inv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_inv.ColumnHeadersVisible = false;
             this.dg_inv.Location = new System.Drawing.Point(18, 290);
             this.dg_inv.MultiSelect = false;
             this.dg_inv.Name = "dg_inv";
@@ -484,7 +486,9 @@
             // 
             this.dg_des.AllowUserToAddRows = false;
             this.dg_des.AllowUserToDeleteRows = false;
+            this.dg_des.AllowUserToResizeColumns = false;
             this.dg_des.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_des.ColumnHeadersVisible = false;
             this.dg_des.Location = new System.Drawing.Point(275, 290);
             this.dg_des.MultiSelect = false;
             this.dg_des.Name = "dg_des";
@@ -499,7 +503,9 @@
             // 
             this.dg_dep.AllowUserToAddRows = false;
             this.dg_dep.AllowUserToDeleteRows = false;
+            this.dg_dep.AllowUserToResizeColumns = false;
             this.dg_dep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_dep.ColumnHeadersVisible = false;
             this.dg_dep.Location = new System.Drawing.Point(532, 290);
             this.dg_dep.MultiSelect = false;
             this.dg_dep.Name = "dg_dep";

@@ -157,7 +157,10 @@
             // 
             this.dg_caj.AllowUserToAddRows = false;
             this.dg_caj.AllowUserToDeleteRows = false;
+            this.dg_caj.AllowUserToResizeColumns = false;
+            this.dg_caj.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_caj.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_caj.ColumnHeadersVisible = false;
             this.dg_caj.Location = new System.Drawing.Point(27, 291);
             this.dg_caj.MultiSelect = false;
             this.dg_caj.Name = "dg_caj";
@@ -167,7 +170,6 @@
             this.dg_caj.Size = new System.Drawing.Size(337, 263);
             this.dg_caj.TabIndex = 14;
             this.dg_caj.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_usu_CellContentClick);
-            this.dg_caj.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_caj_CellContentClick);
             this.dg_caj.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_usu_CellContentClick);
             // 
             // Cajas
