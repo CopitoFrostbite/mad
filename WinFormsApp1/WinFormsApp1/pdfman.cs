@@ -209,7 +209,7 @@ namespace WinFormsApp1
                 dataRow.Cells.Add(av["Cantidad"].ToString());
                
                 dataRow.Cells.Add(string.Format("{0:C2}", Convert.ToDecimal(av["Subtotal"])));
-                dataRow.Cells.Add(string.Format("{0:C2}", Convert.ToDecimal(av["TotalProd"])));
+                dataRow.Cells.Add(string.Format("{0:C2}", Convert.ToDecimal(av["Total"])));
             }
             page.Paragraphs.Add(table2);
             page.Paragraphs.Add(sep);

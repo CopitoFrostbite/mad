@@ -102,7 +102,6 @@ namespace WinFormsApp1
             cb_caje.Hide();
             label3.Hide();
             label4.Hide();
-            dg_rep.DataSource = null;
         }
 
         private void rb_ven_CheckedChanged(object sender, EventArgs e)
@@ -120,7 +119,6 @@ namespace WinFormsApp1
             cb_caje.Hide();
             label3.Show();
             label4.Show();
-            dg_rep.DataSource = null;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -143,12 +141,6 @@ namespace WinFormsApp1
             cb_caje.Show();
             label3.Show();
             label4.Show();
-            dg_rep.DataSource = null;
-        }
-
-        private void dg_rep_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

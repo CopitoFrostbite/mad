@@ -165,19 +165,17 @@
             // 
             this.dg_dep.AllowUserToAddRows = false;
             this.dg_dep.AllowUserToDeleteRows = false;
-            this.dg_dep.AllowUserToResizeColumns = false;
-            this.dg_dep.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_dep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_dep.Location = new System.Drawing.Point(12, 183);
             this.dg_dep.MultiSelect = false;
             this.dg_dep.Name = "dg_dep";
             this.dg_dep.ReadOnly = true;
-            this.dg_dep.RowHeadersVisible = false;
             this.dg_dep.RowTemplate.Height = 25;
             this.dg_dep.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_dep.Size = new System.Drawing.Size(488, 292);
             this.dg_dep.TabIndex = 36;
             this.dg_dep.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_dep_CellContentClick);
+            this.dg_dep.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_dep_CellContentClick_1);
             this.dg_dep.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_dep_CellContentClick);
             // 
             // Departamentos

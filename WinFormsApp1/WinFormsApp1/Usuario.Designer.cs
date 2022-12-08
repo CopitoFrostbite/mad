@@ -70,7 +70,11 @@
             this.dg_usu.AllowUserToAddRows = false;
             this.dg_usu.AllowUserToDeleteRows = false;
             this.dg_usu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< HEAD
             this.dg_usu.Location = new System.Drawing.Point(12, 481);
+=======
+            this.dg_usu.Location = new System.Drawing.Point(12, 277);
+>>>>>>> parent of ee9fad9 (final creo)
             this.dg_usu.MultiSelect = false;
             this.dg_usu.Name = "dg_usu";
             this.dg_usu.ReadOnly = true;

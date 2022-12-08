@@ -10,7 +10,7 @@ GO
 
 CREATE View viGestionDevoluciones 
 AS
-SELECT  D.Recibo, d.ID_Dev Articulo, i.Descripcion Nombre,d.Motivo Motivo, d.Merma Merma, d.Cantidad Cantidad, d.Subtotal Subtotal, d.Total Total, De.Devolucion Devolucion, d.Devuelto
+SELECT  D.Recibo, d.ID_Dev Articulo, i.Descripcion Nombre,d.Motivo Motivo, d.Merma Merma, d.Cantidad Cantidad, d.Subtotal Subtotal, d.Total Total, De.Devolucion Devolucion
 		
 		FROM Devoluciones D		
 		LEFT JOIN Inventario I
