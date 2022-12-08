@@ -166,6 +166,7 @@ namespace WinFormsApp1
         private void bt_inv_Click(object sender, EventArgs e)
         {
             Inventario inventario = new Inventario();
+            inventario.setuse(use);
             inventario.ShowDialog();
         }
 
@@ -184,6 +185,7 @@ namespace WinFormsApp1
         private void bt_devol_Click(object sender, EventArgs e)
         {
             Devoluciones devoluciones= new Devoluciones();
+            devoluciones.setuse(use);
             devoluciones.ShowDialog();
         }
 

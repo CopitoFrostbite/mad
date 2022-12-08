@@ -379,7 +379,7 @@ namespace WinFormsApp1
                 foreach (DataRow tablep in b.Rows)
 
                 {
-                    obj.Add_Inventario2("UP2",Convert.ToInt32(tablep["Articulo"]), Convert.ToDecimal(tablep["Cantidad"]));
+                    obj.Add_Inventario2("UP2",Convert.ToInt32(tablep["Articulo"]), Convert.ToDecimal(tablep["Cantidad"]),user);
 
 
                 }

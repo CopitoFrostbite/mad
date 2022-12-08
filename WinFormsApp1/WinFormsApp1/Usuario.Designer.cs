@@ -149,6 +149,7 @@
             this.dt_nac.Name = "dt_nac";
             this.dt_nac.Size = new System.Drawing.Size(119, 23);
             this.dt_nac.TabIndex = 33;
+            this.dt_nac.ValueChanged += new System.EventHandler(this.dt_nac_ValueChanged);
             // 
             // dt_fin
             // 

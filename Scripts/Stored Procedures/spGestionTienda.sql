@@ -15,10 +15,10 @@ CREATE PROCEDURE spGestionTienda
 	@Nombre			VARCHAR(30)		=NULL,
 	@Sucursal		VARCHAR(30)		=NULL,
 	@Direccion		VARCHAR(50)		=NULL,
-	@Mensaje1		VARCHAR(50)		=NULL,
-	@Mensaje2		VARCHAR(50)		=NULL,
-	@Mensaje3		VARCHAR(50)		=NULL,
-	@Mensaje4		VARCHAR(70)		=NULL
+	@Mensaje1		VARCHAR(200)		=NULL,
+	@Mensaje2		VARCHAR(200)		=NULL,
+	@Mensaje3		VARCHAR(200)		=NULL,
+	@Mensaje4		VARCHAR(200)		=NULL
 	
 	
 	)

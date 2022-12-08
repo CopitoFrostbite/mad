@@ -30,9 +30,19 @@ namespace WinFormsApp1
         private decimal sub = 0;
         private decimal can = 0;
         bool devo = false;
+        private string use = "";
         private void cb_actd_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public String getuse()
+        {
+            return this.use;
+        }
+        public void setuse(string x)
+        {
+            this.use = x;
         }
 
         public bool isValid()
@@ -117,8 +127,8 @@ namespace WinFormsApp1
                 foreach (DataRow tablep in b.Rows)
 
                 {
-                   if (!Convert.ToBoolean(tablep["Merma"])) obj.Add_Inventario2("UP3", Convert.ToInt32(tablep["Articulo"]), Convert.ToDecimal(tablep["Cantidad"]));
-                   else obj.Add_Inventario2("UP4", Convert.ToInt32(tablep["Articulo"]), Convert.ToDecimal(tablep["Cantidad"]));
+                   if (!Convert.ToBoolean(tablep["Merma"])) obj.Add_Inventario2("UP3", Convert.ToInt32(tablep["Articulo"]), Convert.ToDecimal(tablep["Cantidad"]),use);
+                   else obj.Add_Inventario2("UP4", Convert.ToInt32(tablep["Articulo"]), Convert.ToDecimal(tablep["Cantidad"]),use);
 
                 }
                 a = obj.Consulta("spGestionDevoluciones", "SE", ido, "");
@@ -276,11 +286,6 @@ namespace WinFormsApp1
             else return;
         }
 
-        private void dg_devo_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void ntb_totd_ValueChanged(object sender, EventArgs e)
         {
 
@@ -292,7 +297,7 @@ namespace WinFormsApp1
             msg = "Seguro que desea regresar? se anulara la devolucion actual!";
             if (MessageBox.Show(msg, "Atencion!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
             {
-                if(dg_devo.SelectedRows.Count != 0) 
+                if(dg_devo.RowCount != 0) 
                 {
                     msg = "Elimine los articulos existentes";
                     MessageBox.Show(msg, "Eliminado!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -303,6 +308,11 @@ namespace WinFormsApp1
 
             }
             else return;
+        }
+
+        private void dg_busdd_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

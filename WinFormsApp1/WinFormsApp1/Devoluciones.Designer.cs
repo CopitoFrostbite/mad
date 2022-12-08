@@ -104,6 +104,7 @@
             this.dg_busdd.Size = new System.Drawing.Size(585, 195);
             this.dg_busdd.TabIndex = 29;
             this.dg_busdd.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_busdd_CellContentClick);
+            this.dg_busdd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_busdd_CellContentClick_1);
             // 
             // dg_devo
             // 
@@ -130,7 +131,6 @@
             this.dg_devo.Size = new System.Drawing.Size(581, 195);
             this.dg_devo.TabIndex = 30;
             this.dg_devo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_devo_CellContentClick);
-            this.dg_devo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_devo_CellContentClick_1);
             // 
             // groupBox5
             // 

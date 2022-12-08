@@ -9,38 +9,44 @@ IF EXISTS (SELECT name FROM sysobjects
 
 GO
 
-CREATE TRIGGER tpcomp
-	ON Recibo
-	FOR INSERT  
-	
-	
+CREATE TRIGGER tpcomp		
+ON Articulos
+INSTEAD OF INSERT
 AS
-	DECLARE @i int = 1;
-	DECLARE @can INT,@exi INT, @art INT,@can2 int
-	Declare @max int;
-	SELECT @max = max(Orden)
-	FROM ventas
-	while @i <= (select count(Orden) from Articulos a where a.Orden = @max)
-begin
+BEGIN
+    -- Verificar si el artículo ya existe en la tabla
 	
-	SELECT  @art = Articulo,@can = Cantidad, @can2 = Existencia
-	FROM (
-	SELECT   Articulo, Cantidad,  Existencia, ROW_NUMBER() OVER (PARTITION BY orden ORDER BY articulos DESC) [Fila]
-	FROM Articulos A
-		left join Inventario I
-		on a.Articulo = i.ID)T1
-	where [Fila]=@i
-	
-	SELECT  @art = Articulo,@can = Cantidad, @can2 = Existencia
-	FROM Articulos A
-		left join Inventario I
-		on a.Articulo = i.ID)
+    IF EXISTS (SELECT 1 FROM Articulos a,inserted i WHERE a.Articulo = i.Articulo and a.Orden  = i.Orden)
+    BEGIN
+       IF (SELECT a.Cantidad FROM Articulos a,inserted i WHERE a.Articulo = i.Articulo and a.Orden  = i.Orden) + (select i.Cantidad from inserted i) > (SELECT Existencia FROM Inventario,inserted i WHERE ID = i.Articulo)
+	   BEGIN
+			-- Mostrar un mensaje de error y cancelar la operación de inserción
+			RAISERROR ('No hay suficiente cantidad de artículos en inventario', 16, 1);
+			ROLLBACK TRANSACTION;
+		END
+		ELSE
+		BEGIN
+		 -- Actualizar el número de artículos de ese artículo en la tabla
+			UPDATE Articulos
+			SET Cantidad = Cantidad +(select i.Cantidad from inserted i)
+			WHERE Articulo = (select i.Articulo from inserted i) and Orden  = (select i.Orden from inserted i);
+			UPDATE Articulos
+			SET Total = (Cantidad * (select i.Precio from inserted i))
+			WHERE Articulo = (select i.Articulo from inserted i) and Orden  = (select i.Orden from inserted i);
+		END
+    END
+    ELSE
+    BEGIN
+      
+	   DECLARE @Orden			INT	   = (select i.Orden from inserted i)
+	   DECLARE @Articulo		INT		= (select i.Articulo from inserted i)		
+		DECLARE @Cantidad		DECIMAL(13,2)	= (select i.Cantidad from inserted i)
+		DECLARE @Monto			SMALLMONEY		= (select i.Precio from inserted i)
+		DECLARE @Subtotal		SMALLMONEY		= (select i.Total from inserted i)
 		
-		where orden = @max and Articulo = @i
-		
-		UPDATE inventario SET Existencia = @can2 - @can
-		where ID = @art
-		SET @i = @i+1
+        INSERT INTO Articulos(Orden,Articulo,Cantidad,Precio,total)
+			VALUES (@Orden,@Articulo,@Cantidad,@Monto,@Subtotal)
+    END
 		
 end
 	

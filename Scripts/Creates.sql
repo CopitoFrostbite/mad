@@ -7,8 +7,9 @@ IF OBJECT_ID('Historial_Cambios') IS NOT NULL
 	DROP TABLE Historial_Cambios;
 CREATE TABLE Historial_Cambios
 (
-ID_usuario INT NOT NULL, --PK (FK Usuarios),
-ID_Inven INT NOT NULL, --PK (FK Inventario),
+ID INT IDENTITY(1,1) PRIMARY KEY,
+ID_usuario INT NOT NULL, -- (FK Usuarios),
+ID_Inven INT NOT NULL, -- (FK Inventario),
 U_Medida INT NOT NULL,
 Descripcion  VARCHAR(30) NOT NULL,
 Costo SMALLMONEY NOT NULL,
@@ -174,10 +175,10 @@ ID INT IDENTITY (1,1) PRIMARY KEY,
 Nombre VARCHAR(30) , 
 Sucursal  VARCHAR(30),  
 Direccion  VARCHAR(50),
-Mensaje1   VARCHAR(50),
-Mensaje2   VARCHAR(50),
-Mensaje3   VARCHAR(50),
-Mensaje4   VARCHAR(70),
+Mensaje1   VARCHAR(200),
+Mensaje2   VARCHAR(200),
+Mensaje3   VARCHAR(200),
+Mensaje4   VARCHAR(200),
 
 );
 
@@ -212,7 +213,7 @@ ALTER TABLE Pagos
 		FOREIGN KEY (M_Pago) REFERENCES Pago(ID_Pago);
 
 ALTER TABLE Historial_Cambios
-	ADD  CONSTRAINT PK_Historial_Cambios PRIMARY KEY (ID_usuario,ID_Inven),
+	ADD  CONSTRAINT PK_Historial_Cambios 
 		FOREIGN KEY (ID_Inven) REFERENCES Inventario(ID),
 		FOREIGN KEY (ID_Usuario) REFERENCES Usuarios(ID);
 		

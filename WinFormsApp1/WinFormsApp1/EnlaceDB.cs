@@ -649,13 +649,23 @@ namespace WinFormsApp1
             return add;
         }
 
-        public bool Add_Inventario(string opc, int id, int um, string des, decimal cos, decimal pu, decimal exi, decimal pr, int cla, int desc, string fech, bool eli, decimal uv, decimal mer)
+        public bool Add_Inventario(string opc, int id, int um, string des, decimal cos, decimal pu, decimal exi, decimal pr, int cla, int desc, string fech, bool eli, decimal uv, decimal mer,string usu)
         {
             var msg = "";
             var add = true;
             try
             {
                 conectar();
+                string qry2 = "spLogin2";
+                _comandosql = new SqlCommand(qry2, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+                var parametro15 = _comandosql.Parameters.Add("@Usuario", SqlDbType.VarChar, 30);
+                parametro15.Value = usu;
+                _adaptador.InsertCommand = _comandosql;
+
+                _comandosql.ExecuteNonQuery();
+
                 string qry = "spGestionInventario";
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
@@ -721,13 +731,23 @@ namespace WinFormsApp1
             return add;
         }
 
-        public bool Add_Inventario2(string opc, int id, decimal exi  )
+        public bool Add_Inventario2(string opc, int id, decimal exi,string usu  )
         {
             var msg = "";
             var add = true;
             try
             {
                 conectar();
+                string qry2 = "spLogin2";
+                _comandosql = new SqlCommand(qry2, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+                var parametro15 = _comandosql.Parameters.Add("@Usuario", SqlDbType.VarChar, 30);
+                parametro15.Value = usu;
+                _adaptador.InsertCommand = _comandosql;
+                _comandosql.ExecuteNonQuery();
+
+                
                 string qry = "spGestionInventario";
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
@@ -990,7 +1010,7 @@ namespace WinFormsApp1
                 parametro5.Value = mat;
                 var parametro6 = _comandosql.Parameters.Add("@Contrasenia", SqlDbType.VarChar, 30);
                 parametro6.Value = con;
-                var parametro7 = _comandosql.Parameters.Add("@CURP", SqlDbType.VarChar, 16);
+                var parametro7 = _comandosql.Parameters.Add("@CURP", SqlDbType.VarChar, 18);
                 parametro7.Value = cur;
                 var parametro8 = _comandosql.Parameters.Add("@F_nac", SqlDbType.Date);
                 parametro8.Value = nac;

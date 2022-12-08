@@ -42,7 +42,14 @@ namespace WinFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var msg = "";
+            msg = "Seguro que desea Salir de la aplicacion? ";
+            if (MessageBox.Show(msg, "Atencion!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else return;
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

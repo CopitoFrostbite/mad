@@ -17,7 +17,8 @@ EXEC spGestionVentas	'IN',NULL,'1','hitora','' ,$0.00
 
 EXEC spGestionVentas	'IN',NULL,'2', $0.00
 
-EXEC spGestionArticulos  'IN','1','3','2','0','0'
+EXEC spGestionArticulos  'IN',null,'2','2',null,null
+
 EXEC spGestionArticulos  'IN','2','3','2','0','0'
 EXEC spGestionArticulos  'IN','1','2','2','0','0'
 EXEC spGestionArticulos  'IN','1','1','2','0','0'
@@ -121,8 +122,19 @@ SELECT  Fecha,d.Nombre,i.ID,i.Precio_U,v.Caja,sum(a.Cantidad)as 'Cantidad',sum((
 	FROM Usuarios	
 	WHERE Usuario = 'Admin' AND [Contrasenia] = 1234;
 	
-	SELECT  Nombre,[Contrasenia], Usuario,Nivel_cuenta
-	INTO ##GlobalVariables
+	IF OBJECT_ID('tempdb.dbo.#GlobalVariables') IS NOT NULL
+	BEGIN
+	DROP TABLE #GlobalVariables
+	END
+
+	SELECT   ID,Usuario
+	INTO dbo.#GlobalVariables
 	FROM Usuarios
-	WHERE Usuario = 'Admin' AND [Contrasenia] = 1234;
+	WHERE Usuario = 'hitora' AND [Contrasenia] = 'Koalaaa8!';
+		select * from #GlobalVariables
 		select * from ##GlobalVariables
+
+	exec spLogin 'hitora','Koalaaa8!'
+	exec spLogin 'Admin','1234'
+	select * from Historial_Cambios
+	select * from Inventario

@@ -27,6 +27,7 @@ namespace WinFormsApp1
             
             cb_act.Enabled = false;
             dt_fin.Enabled = false;
+            dt_nac.Enabled = true;
 
             dg_usu.ClearSelection();
 
@@ -266,7 +267,12 @@ namespace WinFormsApp1
             if (rb_el.Checked)
             {
                 msg = "Confirme que desea eliminar al Usuario  " + tb_usu.Text ;
-                
+                if (id == 0)
+                {
+                    msg = "No se puede eliminar ";
+                    MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
 
                 if (MessageBox.Show(msg, "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
                 {
@@ -365,6 +371,11 @@ namespace WinFormsApp1
             cb_act.Enabled = false;
             dt_nac.Enabled = false;
             ClearTextBoxes(this.Controls);
+        }
+
+        private void dt_nac_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

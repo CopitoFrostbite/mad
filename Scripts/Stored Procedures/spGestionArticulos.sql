@@ -24,21 +24,26 @@ AS
 BEGIN
 	
 	DECLARE @max int
-	
+	DECLARE @prec decimal
+
 	SELECT @max = max(Orden)
 	FROM ventas
+
+	SELECT @prec = Precio_U
+	FROM Inventario
+	where ID = @Articulo
 
 	IF @Accion = 'IN'
 	BEGIN
 		
-		INSERT INTO Articulos(Orden,Articulo,Cantidad,Subtotal,total)
-			VALUES (@max,@Articulo,@Cantidad,$0.00,$0.00)
+		INSERT INTO Articulos(Orden,Articulo,Cantidad,Precio,total)
+			VALUES (@max,@Articulo,@Cantidad,@prec,(@prec * @Cantidad))
 	END;
 
 	IF @Accion = 'IN2'
 	BEGIN
 		
-		INSERT INTO Articulos(Orden,Articulo,Cantidad,Subtotal,total)
+		INSERT INTO Articulos(Orden,Articulo,Cantidad,Precio,total)
 			VALUES (@Orden,@Articulo,@Cantidad,$0.00,$0.00)
 	END;
 
@@ -50,7 +55,7 @@ BEGIN
 			Articulo		=	@Articulo,
 			Cantidad		=	@Cantidad,
 			
-			Subtotal		=	@Subtotal,
+			Precio		=	@Subtotal,
 			Total			=	@Total
 				
 			WHERE Orden		= @Orden AND Articulo = @Articulo;			
@@ -87,7 +92,7 @@ BEGIN
 
 	IF @Accion = 'SE2'
 	BEGIN
-		SELECT  Orden,Articulo,Cantidad,Subtotal,Total
+		SELECT  Orden,Articulo,Cantidad,Precio,Total
 		FROM Articulos
 		WHERE Orden		= @Orden AND Articulo = @Articulo;
 	END;

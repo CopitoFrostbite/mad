@@ -70,9 +70,19 @@ namespace WinFormsApp1
         private DataTable table3 = new DataTable();
         private DataTable table4 = new DataTable();
         private int id = 0;
+        private string use = "";
         private void Inventario_Load(object sender, EventArgs e)
         {
             
+        }
+
+        public String getuse()
+        {
+            return this.use;
+        }
+        public void setuse(string x)
+        {
+            this.use = x;
         }
 
         public void ClearTextBoxes(Control.ControlCollection ctrlCollection)
@@ -227,7 +237,7 @@ namespace WinFormsApp1
                 var tabla2 = new DataTable();
                 
               
-                obj.Add_Inventario("IN", 0, cb_um.SelectedIndex, tb_desc.Text, ntb_cos.Value, ntb_pu.Value, ntb_ex.Value, ntb_pr.Value, Convert.ToInt32(cb_dep.Text), Convert.ToInt32(cb_des.Text), "", false, 0, 0);
+                obj.Add_Inventario("IN", 0, cb_um.SelectedIndex, tb_desc.Text, ntb_cos.Value, ntb_pu.Value, ntb_ex.Value, ntb_pr.Value, Convert.ToInt32(cb_dep.Text), Convert.ToInt32(cb_des.Text), "", false, 0, 0,use);
                 tabla = obj.Consulta("spGestionInventario", "SE6", 0, "");
                 tabla2 = obj.Consulta("spGestionInventario", "SE7", 0, "");
                 table = tabla;
@@ -244,7 +254,7 @@ namespace WinFormsApp1
                 var obj = new EnlaceDB();
                 var tabla = new DataTable();
                 var tabla2 = new DataTable();
-                obj.Add_Inventario("UP", id, cb_um.SelectedIndex, tb_desc.Text, ntb_cos.Value, ntb_pu.Value, ntb_ex.Value, ntb_pr.Value, Convert.ToInt32(cb_dep.Text), Convert.ToInt32(cb_des.Text), dt_fa.Text, cb_act.Checked, ntb_uv.Value,ntb_mer.Value );
+                obj.Add_Inventario("UP", id, cb_um.SelectedIndex, tb_desc.Text, ntb_cos.Value, ntb_pu.Value, ntb_ex.Value, ntb_pr.Value, Convert.ToInt32(cb_dep.Text), Convert.ToInt32(cb_des.Text), dt_fa.Text, cb_act.Checked, ntb_uv.Value,ntb_mer.Value,use );
                 tabla = obj.Consulta("spGestionInventario", "SE6", 0, "");
                 tabla2 = obj.Consulta("spGestionInventario", "SE7", 0, "");
                 table = tabla;
