@@ -128,11 +128,8 @@
             this.dg_rec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_rec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 <<<<<<< HEAD
-<<<<<<< HEAD
             this.dg_rec.Location = new System.Drawing.Point(22, 199);
 =======
-=======
->>>>>>> parent of ee9fad9 (final creo)
             this.dg_rec.Location = new System.Drawing.Point(22, 192);
 >>>>>>> parent of ee9fad9 (final creo)
             this.dg_rec.MultiSelect = false;

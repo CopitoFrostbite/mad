@@ -56,11 +56,8 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 <<<<<<< HEAD
-<<<<<<< HEAD
             this.dataGridView1.Location = new System.Drawing.Point(39, 154);
 =======
-=======
->>>>>>> parent of ee9fad9 (final creo)
             this.dataGridView1.Location = new System.Drawing.Point(11, 111);
 >>>>>>> parent of ee9fad9 (final creo)
             this.dataGridView1.Name = "dataGridView1";

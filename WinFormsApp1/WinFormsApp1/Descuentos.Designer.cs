@@ -238,11 +238,8 @@
             this.dg_usu.AllowUserToDeleteRows = false;
             this.dg_usu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 <<<<<<< HEAD
-<<<<<<< HEAD
             this.dg_usu.Location = new System.Drawing.Point(12, 337);
 =======
-=======
->>>>>>> parent of ee9fad9 (final creo)
             this.dg_usu.Location = new System.Drawing.Point(12, 182);
 >>>>>>> parent of ee9fad9 (final creo)
             this.dg_usu.MultiSelect = false;
@@ -254,11 +251,7 @@
             this.dg_usu.TabIndex = 13;
             this.dg_usu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_usu_CellContentClick);
 <<<<<<< HEAD
-<<<<<<< HEAD
         
-=======
-            this.dg_usu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_usu_CellContentClick_1);
->>>>>>> parent of ee9fad9 (final creo)
 =======
             this.dg_usu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_usu_CellContentClick_1);
 >>>>>>> parent of ee9fad9 (final creo)

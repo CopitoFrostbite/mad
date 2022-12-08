@@ -71,11 +71,8 @@
             this.dg_usu.AllowUserToDeleteRows = false;
             this.dg_usu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 <<<<<<< HEAD
-<<<<<<< HEAD
             this.dg_usu.Location = new System.Drawing.Point(12, 481);
 =======
-=======
->>>>>>> parent of ee9fad9 (final creo)
             this.dg_usu.Location = new System.Drawing.Point(12, 277);
 >>>>>>> parent of ee9fad9 (final creo)
             this.dg_usu.MultiSelect = false;
