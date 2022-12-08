@@ -178,7 +178,11 @@
             this.dg_bus.TabIndex = 16;
             this.dg_bus.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_bus_CellContentClick);
 <<<<<<< HEAD
+<<<<<<< HEAD
            
+=======
+            this.dg_bus.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_bus_CellContentClick_1);
+>>>>>>> parent of ee9fad9 (final creo)
 =======
             this.dg_bus.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_bus_CellContentClick_1);
 >>>>>>> parent of ee9fad9 (final creo)
@@ -377,8 +381,11 @@
             this.dg_lis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_lis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dg_lis.Location = new System.Drawing.Point(21, 23);
 =======
+=======
+>>>>>>> parent of ee9fad9 (final creo)
             this.dg_lis.Location = new System.Drawing.Point(17, 23);
 >>>>>>> parent of ee9fad9 (final creo)
             this.dg_lis.MultiSelect = false;
