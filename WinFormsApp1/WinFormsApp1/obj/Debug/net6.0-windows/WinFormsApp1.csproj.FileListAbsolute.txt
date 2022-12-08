@@ -125,4 +125,3 @@ D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\Win
 D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
 D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
 D:\Documentos\Facultad\Materias 9no semestre\MAD(tercersas)\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Properties.Resources.resources
-C:\Users\rober\OneDrive\Escritorio\MAD\proyecto\mad\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Properties.Resources.resources
