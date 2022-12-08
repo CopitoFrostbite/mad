@@ -424,11 +424,6 @@ namespace WinFormsApp1
             
         }
 
-        private void dg_bus_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void lb_caj2_Click(object sender, EventArgs e)
         {
 

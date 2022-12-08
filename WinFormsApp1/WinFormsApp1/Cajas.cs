@@ -126,10 +126,5 @@ namespace WinFormsApp1
         {
             this.Close();
         }
-
-        private void dg_caj_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
