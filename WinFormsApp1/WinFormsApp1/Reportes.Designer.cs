@@ -104,10 +104,8 @@
             // 
             // dg_rep
             // 
-            this.dg_rep.AllowUserToResizeColumns = false;
             this.dg_rep.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_rep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_rep.ColumnHeadersVisible = false;
             this.dg_rep.Location = new System.Drawing.Point(18, 240);
             this.dg_rep.MultiSelect = false;
             this.dg_rep.Name = "dg_rep";
@@ -115,7 +113,6 @@
             this.dg_rep.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_rep.Size = new System.Drawing.Size(855, 405);
             this.dg_rep.TabIndex = 4;
-            this.dg_rep.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_rep_CellContentClick);
             // 
             // button4
             // 

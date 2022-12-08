@@ -48,11 +48,6 @@ exec spGestionDepartamento 'SE2'
 select * from Devoluciones
  SELECT * FROM Inventario
 SElECT * FROM Tienda
-
-SELECT  Recibo,Articulo,Nombre,Motivo,Cantidad,Subtotal,Total TotalProd
-		FROM viGestionDevoluciones
-			
-		where recibo = 1 
 select * from Recibo
 select * from viGestionRecibo where orden = 1
 select * from viGestionRecibo
@@ -143,5 +138,3 @@ SELECT  Fecha,d.Nombre,i.ID,i.Precio_U,v.Caja,sum(a.Cantidad)as 'Cantidad',sum((
 	exec spLogin 'Admin','1234'
 	select * from Historial_Cambios
 	select * from Inventario
-	INSERT INTO Devoluciones(Recibo,ID_Dev,Motivo,Merma,Cantidad,Subtotal,Total,Devuelto)
-			VALUES(5,5,'sdf',1,4,44,55,0)

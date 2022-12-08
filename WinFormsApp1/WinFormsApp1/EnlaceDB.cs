@@ -130,7 +130,7 @@ namespace WinFormsApp1
                     var parametro1 = _comandosql.Parameters.Add("@fecha", SqlDbType.Date);
                     parametro1.Value = (param2);
                 }
-                if (SP == "spGestionDevoluciones" && AC == "SE" || SP == "spGestionDevoluciones" && AC == "SE2" || SP == "spGestionDevoluciones" && AC == "SE3")
+                if (SP == "spGestionDevoluciones" && AC == "SE" || SP == "spGestionDevoluciones" && AC == "SE2")
                 {
                     var parametro2 = _comandosql.Parameters.Add("@Recibo", SqlDbType.Int);
                     parametro2.Value = (param1);
@@ -334,48 +334,6 @@ namespace WinFormsApp1
                 parametro7.Value = sub;
                 var parametro8 = _comandosql.Parameters.Add("@Total", SqlDbType.SmallMoney);
                 parametro8.Value = tot;
-
-
-                _comandosql.Prepare();
-                _adaptador.InsertCommand = _comandosql;
-
-                _comandosql.ExecuteNonQuery();
-
-            }
-            catch (SqlException e)
-            {
-                add = false;
-                msg = "Excepción de base de datos: \n";
-                msg += e.Message;
-                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            finally
-            {
-                desconectar();
-            }
-
-            return add;
-        }
-
-        public bool Add_Devolucion2(string opc, int rec, int ide)
-        {
-            var msg = "";
-            var add = true;
-            try
-            {
-                conectar();
-                string qry = "spGestionDevoluciones";
-                _comandosql = new SqlCommand(qry, _conexion);
-                _comandosql.CommandType = CommandType.StoredProcedure;
-                _comandosql.CommandTimeout = 1200;
-
-                var parametro1 = _comandosql.Parameters.Add("@Accion", SqlDbType.Char, 3);
-                parametro1.Value = opc;
-                var parametro4 = _comandosql.Parameters.Add("@Recibo", SqlDbType.Int);
-                parametro4.Value = rec;
-                var parametro2 = _comandosql.Parameters.Add("@ID_Dev", SqlDbType.Int);
-                parametro2.Value = ide;
-               
 
 
                 _comandosql.Prepare();

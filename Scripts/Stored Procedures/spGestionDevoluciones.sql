@@ -17,8 +17,7 @@ CREATE PROCEDURE spGestionDevoluciones
 	@Merma			BIT				=NULL,
 	@Cantidad		DECIMAL(13,2)	=NULL, 
 	@Subtotal		SMALLMONEY		=NULL,
-	@Total			SMALLMONEY		=NULL,
-	@Devuelto		bit				=null
+	@Total			SMALLMONEY		=NULL
 	)
 AS
 BEGIN
@@ -31,20 +30,11 @@ BEGIN
 		
 		 
 
-		INSERT INTO Devoluciones(Recibo,ID_Dev,Motivo,Merma,Cantidad,Subtotal,Total,Devuelto)
-			VALUES(@Recibo,@ID_Dev,@Motivo,@Merma,@Cantidad,@Subtotal,@Total,0)
+		INSERT INTO Devoluciones(Recibo,ID_Dev,Motivo,Merma,Cantidad,Subtotal,Total)
+			VALUES(@Recibo,@ID_Dev,@Motivo,@Merma,@Cantidad,@Subtotal,@Total)
 	END;
 
-	IF @Accion = 'UP'
-	BEGIN
-		UPDATE Devoluciones
-			SET
-				Devuelto		= 1
-				
-				
-				
-			WHERE Recibo = @Recibo and ID_Dev	= @ID_Dev ;			
-	END;
+	
 
 	
 
@@ -55,7 +45,7 @@ BEGIN
 
 	BEGIN
 		
-		SELECT  Recibo,Articulo,Nombre,Motivo,Merma,Cantidad,Subtotal,Total,Devolucion,Devuelto
+		SELECT  Recibo,Articulo,Nombre,Motivo,Merma,Cantidad,Subtotal,Total,Devolucion
 		FROM viGestionDevoluciones
 			
 		where recibo = @Recibo AND Devolucion = 1
@@ -71,15 +61,6 @@ BEGIN
 		where recibo = @Recibo 
 	END;
 
-	IF @Accion = 'SE3'
-
-	BEGIN
-		
-		SELECT  Recibo,Articulo,Nombre,Motivo,Merma,Cantidad,Subtotal,Total,Devolucion,Devuelto
-		FROM viGestionDevoluciones
-			
-		where recibo = @Recibo AND Devolucion = 1 and Devuelto = 0
-	END;
 
 	IF @Accion = 'DE'
 	BEGIN

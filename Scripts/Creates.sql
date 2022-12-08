@@ -35,8 +35,7 @@ Motivo VARCHAR(30),
 Merma BIT NOT NULL ,
 Cantidad DECIMAL(13,2) NOT NULL,
 Subtotal SMALLMONEY NOT NULL,
-Total SMALLMONEY NOT NULL,
-Devuelto bit not null
+Total SMALLMONEY NOT NULL
 );
 
 IF OBJECT_ID('Recibo') IS NOT NULL

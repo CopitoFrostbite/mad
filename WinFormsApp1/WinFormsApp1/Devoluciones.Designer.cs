@@ -83,10 +83,8 @@
             // 
             this.dg_busdd.AllowUserToAddRows = false;
             this.dg_busdd.AllowUserToDeleteRows = false;
-            this.dg_busdd.AllowUserToResizeColumns = false;
             this.dg_busdd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_busdd.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dg_busdd.ColumnHeadersVisible = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -106,12 +104,12 @@
             this.dg_busdd.Size = new System.Drawing.Size(585, 195);
             this.dg_busdd.TabIndex = 29;
             this.dg_busdd.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_busdd_CellContentClick);
+            this.dg_busdd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_busdd_CellContentClick_1);
             // 
             // dg_devo
             // 
             this.dg_devo.AllowUserToAddRows = false;
             this.dg_devo.AllowUserToDeleteRows = false;
-            this.dg_devo.AllowUserToResizeColumns = false;
             this.dg_devo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg_devo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
